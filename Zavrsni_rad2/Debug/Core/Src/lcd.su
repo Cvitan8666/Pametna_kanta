@@ -1,0 +1,6 @@
+../Core/Src/lcd.c:9:6:lcd_slanje_naredbe	32	static
+../Core/Src/lcd.c:22:6:lcd_slanje_podatka	32	static
+../Core/Src/lcd.c:35:6:lcd_ocisti	8	static
+../Core/Src/lcd.c:42:6:lcd_postavi_kursor	16	static
+../Core/Src/lcd.c:58:6:lcd_inicijalizacija	8	static
+../Core/Src/lcd.c:84:6:lcd_slanje_stringa	16	static
