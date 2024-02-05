@@ -25,10 +25,10 @@ void lcd_slanje_podatka (char podatak)
 	uint8_t podatak_niz[4];
 	podatak_gornji = (podatak&0xf0);
 	podatak_donji = ((podatak<<4)&0xf0);
-	podatak_niz[0] = podatak_gornji|0x0D;  //en=1, rs=0
-	podatak_niz[1] = podatak_gornji|0x09;  //en=0, rs=0
-	podatak_niz[2] = podatak_donji|0x0D;  //en=1, rs=0
-	podatak_niz[3] = podatak_donji|0x09;  //en=0, rs=0
+	podatak_niz[0] = podatak_gornji|0x0D;  //en=1, rs=1
+	podatak_niz[1] = podatak_gornji|0x09;  //en=0, rs=1
+	podatak_niz[2] = podatak_donji|0x0D;  //en=1, rs=1
+	podatak_niz[3] = podatak_donji|0x09;  //en=0, rs=1
 	HAL_I2C_Master_Transmit (&hi2c1, SLAVE_ADRESA,(uint8_t *) podatak_niz, 4, 100);
 }
 
